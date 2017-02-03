@@ -31,9 +31,10 @@ def pets_by_breed(pet_shop, breed)
   found_pets = []  
     for pets in pet_shop[:pets]     
       if pets[:breed] == breed
-        found_pets << pets
+        found_pets.push(pets)
       end
+    end
     return found_pets
-  end
+
 end
 
