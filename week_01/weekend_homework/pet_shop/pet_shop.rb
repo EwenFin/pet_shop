@@ -45,5 +45,20 @@ def find_pet_by_name(pet_shop, pet_name)
     end
   end
   return found_pets[0]
+#I initially put this return inside the return loop and only got 1 result, that took me a long time to notice 
 end
+
+def remove_pet_by_name(pet_shop, pet_name)
+  for pets in pet_shop[:pets]
+    if pets[:name] == pet_name
+    pet_shop[:pets].delete(pets)
+    end
+  end
+end
+
+def add_pet_to_stock(pet_shop, new_pet)
+  return pet_shop[:pets].push(new_pet)
+  #I tried to use merge here but it wouldn't work and I don't understand why
+end
+
 
