@@ -77,4 +77,12 @@ def customer_can_afford_pet(customer, new_pet)
   else
     return false
   end
+  #put the <= the wrong way around, had to look up why it didn't work
+end
+
+def sell_pet_to_customer(pet_shop, pets, customer)
+  increase_pets_sold(pet_shop, 1)
+  add_or_remove_cash(pet_shop, pets[:price])
+  add_pet_to_customer(customer, pets)
+  remove_pet_by_name(pet_shop, pets[:name])
 end
