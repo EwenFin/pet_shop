@@ -35,6 +35,7 @@ def pets_by_breed(pet_shop, breed)
       end
     end
     return found_pets
+    #I hated this function
 end
 
 def find_pet_by_name(pet_shop, pet_name)
@@ -61,4 +62,8 @@ def add_pet_to_stock(pet_shop, new_pet)
   #I tried to use merge here but it wouldn't work and I don't understand why
 end
 
+def customer_pet_count(customers)
+  count = customers[:pets].length
+  return count
+end
 
